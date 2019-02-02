@@ -1,0 +1,90 @@
+hr {
+        width:75%;
+        background-color:blue;
+        height:5px;
+    }
+    
+body{
+    background-color:black;
+    color:white;
+}
+
+header, main, nav, footer, #content{
+    text-align: center;
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+
+nav a{
+    padding:15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none; /*removes underline*/
+    color: white; /*by default, links are blue*/
+}
+
+nav a:hover, #current{ /*pseudo class*/
+    border-bottom:2px orange solid;
+    font-size: 2em;
+    transition: .9s; /*transition effect*/
+}
+
+#me, #welcomeText{
+    float:left;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 50px;
+    width:200px;
+    font-size: 1.3em;
+}
+
+footer{
+    clear: left;
+}
+
+table{
+    margin:0px auto;
+}
+
+td{
+    padding-right: 10px;
+    /*font-size-adjust: 1.3em;*/
+    font-size: 1.3em;
+}
+
+td strong{
+    color: orange;
+}
+
+#table-header{
+    background-color: #351a00;
+}
+
+.table-row{
+    background-color: #753900;
+}
+
+ul{
+    text-align: left;
+    padding-left: 200px;
+}
+
+.hobby {
+    color: yellow;
+}
+
+form{
+    width: 760px;
+    margin: 0 auto;
+}
+
+#profilePic{
+    border-radius: 100px;
+}
+
+resize{
+    max-width:20%;
+    max-height:20%;
+}
