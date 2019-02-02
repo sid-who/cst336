@@ -31,8 +31,13 @@ nav a:hover, #current{ /*pseudo class*/
     transition: .9s; /*transition effect*/
 }
 
-#me, #welcomeText{
+#me{
     float:left;
+}
+
+#welcomeText{
+    /*float:left;*/
+    float:right;
     text-align: left;
     padding-left: 10px;
     padding-top: 50px;
@@ -85,6 +90,12 @@ form{
 }
 
 resize{
-    max-width:20%;
-    max-height:20%;
+    max-width:50%;
+    max-height:50%;
+}
+
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
 }
