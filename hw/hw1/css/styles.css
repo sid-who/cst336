@@ -25,7 +25,7 @@ body{
     color:white;
 }
 
-header, main, nav, footer{
+header, nav, footer, #front{
     text-align: center;
     width:960px;
 
@@ -39,15 +39,7 @@ header, main, nav, footer{
 }
 
 #setaside{
-    float:left;
-}
-
-aside{
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 50px;
-    width: 200px;
-    font-size: 1.3em;
+    float:right;
 }
 
 h1{
@@ -61,4 +53,45 @@ div{
     margin: 4rem;
     padding: 2rem;
     outline-offset: 0.5rem;
+}
+
+p{
+    font-size: 150%;
+}
+
+#list{
+    color: gold;
+}
+
+#sourcelist{
+      background: gold;
+      padding: 5px;
+      margin-left: 35px;
+}
+#sourcetext{
+    color: #093377;
+}
+
+#listmarker{
+    list-style-type: circle;
+}
+
+#links:link{
+    color: #093377;
+    font-size: 150%
+}
+
+#links:visited{
+    color: red;
+    font-size: 150%
+}
+
+#links:hover{
+    color:green;
+    font-size: 150%
+}
+
+#shrink{
+    width: 10%;
+    height: 10%;
 }
