@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> JS review </title>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script>
+            
+            //$ is nearly equivalent to document.getElementId() in jQuery.
+                        
+            function $(id){
+                return document.getElementById(id);           }
+        
+            function doMagic(){
+                //alert("It's working!");
+                document.getElementById("catImage").src = "img/now_you_dont.png";
+                document.getElementById("message").innerHTML="... now you don't!!";
+                document.getElementById("message").style.color = "red";
+                
+                //make the second button appear.
+                document.getElementById("reappearBtn").style.display = "inline";
+            }
+            
+            function reappear(){
+                document.getElementById("catImage").src= "img/now_you_see_me.png"
+                document.getElementById("message").innerHTML= "Now you see me...";
+                document.getElementById("message").style.color = "black";
+                
+                //make second button disappear again
+                document.getElementById("reappear").style.display = "none";
+            }
+        </script>
+        
+        <style>
+            #reappearBtn{
+                display: none;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <img id="catImage" src="img/now_you_see_me.png"> <br>
+        <span id="message">Now you see me...</span>
+        <br>
+        <button onclick="doMagic()"> Do Magic!</button>
+        
+        <button id="reappearBtn" onclick="reappear()"> Bring it back! </button>
+    </body>
+</html>
