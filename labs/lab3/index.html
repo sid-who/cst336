@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> US Geography Quiz </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1 class="jumbotron"> US Geography Quiz </h1>
+        <h2><span id="markImg1"></span>What is the capital of California?</h2>
+        <input type="text" id="q1">
+        <div id="q1feed"></div>
+        <h2 id="validSubmission1"></h2>
+        
+        <h2><span id="markImg2"></span>Which is the longest U.S. river?</h2>
+        <select id="q2">
+            <option> </option>
+            <option>Mississippi River</option>
+            <option>Missouri River</option>
+            <option>Colorado River</option>
+            <option>Delaware River</option>
+        </select>
+        <div id="q2feed"></div>
+        <h2 id="validSubmission2"></h2>
+        
+        <h2><span id="markImg3"></span>Which is the smallest U.S. state?</h2>
+        <input type="radio" name="q3" id="maine" value="Maine"><label for="maine">Maine</label>
+        <input type="radio" name="q3" id="ri" value="Rhode Island"><label for="ri">Rhode Island</label>
+        <input type="radio" name="q3" id="maryland" value="Maryland"><label for="maryland">Maryland</label>
+        <input type="radio" name="q3" id="delaware" value="Delaware"><label for="delaware">Delaware</label>
+        <div id="q3feed"></div>
+        <h2 id="validSubmission3"></h2>
+        
+        <h2><span id="markImg4"></span>Which presidents are carved into Mount Rushmore?</h2>
+        <input type="checkbox" name="q4" id="jkson" value="Jackson"><label for="jkson">Jackson</label><br>
+        <input type="checkbox" name="q4" id="frnk"value="Franklin"><label for="frnk">Franklin</label><br>
+        <input type="checkbox" name="q4" id="jeff" value="Jefferson"><label for="jeff">Jefferson</label><br>
+        <input type="checkbox" name="q4" id="roose" value="Roosevelt"><label for="roose">Roosevelt</label><br>
+        <div id="q4feed"></div>
+        <h2 id="validSubmission4"></h2>
+        
+        <h2><span id="markImg5"></span>Which of the images is the Seal of the Great California?</h2>
+        <img src = "img/seal1.png" alt="seal 1" class="active" id="seal1">
+        <img src = "img/seal2.png" alt="seal 2" class="active" id="seal2">
+        <img src = "img/seal3.png" alt="seal 3" class="active" id="seal3">
+        <div id="q5feed"></div>
+        <h2 id="validSubmission5"></h2>
+        
+        <br><br>
+        <h2 id="total"></h2>
+        <h2 id="congratulations"></h2>
+        <h2 id="totalTimes"></h2>
+        <h3 id="prevScores"></h3>
+        <button id="submitButton"> Submit </button>
+
+    </body>
+    
+    <script>
+    
+    /*global $*/
+        let q1v = 20;
+        let q2v = 20;
+        let q3v = 20;
+        let q4v = 20;
+        let q5v = 20;
+        
+        let q1a = "sacramento";
+        let q2a = "Missouri River";
+        let q3a = "Rhode Island";
+        let q5a = "seal2"
+        
+        let q5r = "";
+        //let attempts = 0;
+        let totalTimes = localStorage.getItem("totalTimesTaken");
+        let scoresArray = localStorage.getItem("scoreHistory");
+        if(scoresArray == null)
+        {
+            scoresArray = [];
+        }
+        else
+        {
+            scoresArray = scoresArray.split(", "); //creates array from string
+        }
+        
+        $(".active").on("click", function()
+        {
+            $(".active").css("background", "");
+            $(this).css("background", "yellow");
+            q5r = $(this).attr("id");
+        });
+        
+        function isFormValid()
+        {
+            //let isValid = false;
+            let isValid1 = true;
+            //let isValid2 = true;
+            //let isValid3 = true;
+            //let isValid4 = true;
+            //let isValid5 = true;
+            if($("#q1").val()=="")
+            {
+                isValid1 = false;
+                $("#validSubmission1").html("Question 1 not answered").css("color","red");
+            }
+            else
+            {
+                isValid1 = true;
+            }
+            /*if($("#q2").val()== "")
+            {
+                isValid2 = false;
+                $("#validSubmission2").html("Question 2 not answered").css("color","red");
+            }
+            else
+            {
+                isValid2 = true;
+            }
+            if($("input[name=q3]:checked").length == 0)
+            {
+                isValid3 = false;
+                $("#validSubmission3").html("Question 3 not answered").css("color","red");
+            }
+            else
+            {
+                isValid3 = true;
+            }
+            if(!$("#jkson").is(":checked")&&!$("#frnk").is(":checked")&&!$("#jeff").is(":checked")&&!$("#roose").is(":checked"))
+            {
+                isValid4 = false;
+                $("#validSubmission4").html("Question 4 not answered").css("color","red");
+            }
+            else
+            {
+                isValid4 = true;
+            }
+            if(q5r == "")//Q5
+            {
+                isValid5 = false;
+                $("#validSubmission5").html("Question 5 not answered").css("color","red");
+            }
+            else
+            {
+                isValid5 = true;
+            }
+            
+            if(isValid1 == true && isValid2 == true && isValid3 == true && isValid4 == true && isValid5 == true)
+            {
+                isValid == true;
+            }
+            /*else
+            {
+                isValid == false;
+            }*/
+            return isValid1;
+            
+            //return isValid1, isValid2, isValid3, isValid4, isValid5;
+        }
+        
+        $("#submitButton").on("click", function()
+        {
+            $("#validSubmission1").html("");
+            //$("#validSubmission2").html("");
+            //$("#validSubmission3").html("");
+            //$("#validSubmission4").html("");
+            //$("#validSubmission5").html("");
+            
+            if (!isFormValid()) {   //isFormValid == false
+                return;
+            }
+            //var validator = $()
+            
+            let totalPoints= 0;
+            let q1r = $("#q1").val().toLowerCase();
+            let q2r = $("#q2").val();
+            let q3r = $("input[name=q3]:checked").val();
+            
+            if(q1r == q1a)
+            {
+                $("#q1feed").html("Correct!").css("color", "green");
+                $("#markImg1").html("<img src ='img/checkmark.png' alt='checkmark'>");
+                totalPoints += q1v;
+            }
+            //q2
+            else
+            {
+                $("#q1feed").html("Incorrect!").css("color", "red");
+                $("#markImg1").html("<img src ='img/xmark.png' alt='xmark'>");
+            }
+            if(q2r == q2a)
+            {
+                $("#q2feed").html("Correct!").css("color", "green");
+                $("#markImg2").html("<img src ='img/checkmark.png' alt='checkmark'>");
+                totalPoints += q2v;
+            }
+            else
+            {
+                $("#q2feed").html("Incorrect!").css("color", "red");
+                $("#markImg2").html("<img src ='img/xmark.png' alt='xmark'>");
+            }
+            //q3
+            if(q3r == q3a)
+            {
+                $("#q3feed").html("Correct!").css("color", "green");
+                $("#markImg3").html("<img src ='img/checkmark.png' alt='checkmark'>");
+                totalPoints += q3v;
+            }
+            else
+            {
+                $("#q3feed").html("Incorrect!").css("color", "red");
+                $("#markImg3").html("<img src ='img/xmark.png' alt='xmark'>");
+            }
+            if(document.getElementById('jeff').checked && document.getElementById('roose').checked)
+            {
+                if(document.getElementById('frnk').checked || document.getElementById('jkson').checked)
+                {
+                    $("#q4feed").html("Incorrect!").css("color", "red");
+                    $("#markImg4").html("<img src ='img/xmark.png' alt='xmark'>");
+                }
+                else
+                {
+                    $("#q4feed").html("Correct!").css("color", "green");
+                    $("#markImg4").html("<img src ='img/checkmark.png' alt='checkmark'>");
+                    totalPoints += q4v;
+                }
+            }
+            else
+            {
+                $("#q4feed").html("Incorrect!").css("color", "red");
+                $("#markImg4").html("<img src ='img/xmark.png' alt='xmark'>");
+            }
+            //q5
+            if(q5r == q5a)
+            {
+                $("#q5feed").html("Correct!").css("color", "green");
+                $("#markImg5").html("<img src ='img/checkmark.png' alt='checkmark'>");
+                totalPoints += q5v;
+            }
+            else
+            {
+                $("#q5feed").html("Incorrect!").css("color", "red");
+                $("#markImg5").html("<img src ='img/xmark.png' alt='xmark'>");
+            }
+            //attempts++;
+            //localStorage.setItem("")
+            if(totalPoints == 100)
+            {
+                $("#total").html("The total score is: " + totalPoints);
+                $("#congratulations").html("CONGRATULATIONS!");
+            }
+            else
+            {
+               $("#total").html("The total score is: " + totalPoints); 
+            }
+            totalTimes++;
+            localStorage.setItem("totalTimesTaken", totalTimes);
+            $("#totalTimes").html("Quiz taken: " + totalTimes + " time(s)");
+            scoresArray.push(totalPoints);
+            $("#prevScores").html("Score History: ");
+            scoresArray.forEach(function(score)
+            {
+               $("#prevScores").append(score + " "); 
+            });
+            
+            localStorage.setItem("scoreHistory", scoresArray);
+            //$("#attempts").html("Number of attempts thus far: " + attempts);
+        });
+        
+    </script>
+    
+     <footer id="footer">
+          &copy; 2019. Gurpreet Sidhu - CST 336 Internet Programming <br/>
+            <strong>Disclaimer:</strong> The content of this page is fake. It is only intended for educational purposes.
+            
+            <br><br>
+            
+            <img src="../../img/csumb.png" alt = "CSUMB Logo" />
+            
+            <br><br>
+            
+            <img id="shrink" src="../../img/buddy_verified.png" alt = "Buddy Verified"/>
+      </footer>
+</html>
