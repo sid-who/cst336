@@ -1,0 +1,66 @@
+body{
+    /*background-color: black;*/
+    background-image: url("../img/bricks.jpg");
+    text-align: center;
+}
+
+.jumbotron{
+    background-image: url("../img/redtop.jpg");
+    color:white;
+}
+
+label{
+    display:inline-block;
+    /*padding:5px;
+    color:#222;
+    /*font-family:corbel,sans-serif;*/
+    font-size: 14px;
+    /*margin: 10px;*/
+    vertical-align: middle;
+}
+
+#formBorder{
+    background: maroon;
+    color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+
+#submitButton{
+    background-color:#00cc99;
+    border: none;
+    color: maroon;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
+hr.new1{
+    border-top: 10px dotted black;
+}
+
+#q1{
+    color: blue;
+}
+
+#q2{
+    color: blue;
+}
+
+#q3{
+    color:blue;
+}
+
+#q5{
+    color:blue;
+}

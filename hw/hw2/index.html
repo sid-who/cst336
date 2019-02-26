@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Homework 2 </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1 id="top" class="jumbotron"> Could You Kill a Dragon? </h1>
+        
+        <div id="formBorder">
+            <h2> What is your name? </h2>
+            <input type="text" id="q1">
+            <div id="validSubmission1"></div>
+            <hr class="new1">
+            
+            <h2> How old are you? </h2>
+            <input type="number" id="q2">
+            <div id="validSubmission2"></div>
+            <hr class="new1">
+            
+            <h2> Are you wearing armor? </h2>
+            <select id="q3">
+                <option value="null"> </option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <div id="validSubmission3"></div>
+            <hr class="new1">
+            
+            <h2> How are you armed for this fight? </h2>
+            <input type="radio" name="q4" id="rusty" value="cut"><label for="rusty">A rusty sword, but a reliable one.</label><br><br>
+            <input type="radio" name="q4" id="bow" value="shoot"><label for="bow">A bow, arrows, and a small dagger.</label><br><br>
+            <input type="radio" name="q4" id="powder" value="explode"><label for="powder">A horn of black powder, bullets, and a rifle.</label><br><br>
+            <div id="validSubmission4"></div>
+            <hr class="new1">
+            
+            <h2> Would you like to drink a potion? </h2>
+            
+            <select id="q5">
+                <option value="null"> </option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <div id="validSubmission5"></div>
+            <hr class="new1">
+            
+            <input type="checkbox" name="q6" id="confirmed" value="Conf"><label for="confirmed">Are you sure you want to fight a dragon? By clicking this box, you consent to waive any and all liability
+            in relation to death, dismemberment, inceration, or any other calamity not mentioned. This waiver exists in
+            perpetuity.</label>
+            <div id="validSubmission6"></div>
+            <hr class="new1">
+            
+            <button id = "submitButton"> Get Results Below </button>
+            <hr class="new1">
+            
+            <br><br>
+            
+            <span id="resultphoto"></span>
+            <br>
+            <div id="result"></div>
+            
+        </div>
+        
+    </body>
+    
+    <script>
+        /*global $*/
+        let statVal = 0;
+        
+        function isFormValid(){
+            let isValid =  true;
+            
+            if($("#q1").val() == ""){
+                isValid = false;
+                $("#validSubmission1").html("You must provide your name, we'll need it for your gravestone.").css("color","green");
+            }
+            if($("#q2").val() < 1 || $("#q2").val() == ""){
+                isValid = false;
+                $("#validSubmission2").html("You can't have a negative age. Are you out of your mind?").css("color","green");
+            }
+            if($("#q3").val() == "null")
+            {
+                isValid = false;
+                $("#validSubmission3").html("Say 'Yes' or 'No' to continue").css("color", "green");
+            }
+            if($("input[name=q4]:checked").val() == undefined)
+            {
+                isValid = false;
+                $("#validSubmission4").html("You're going to need a weapon. You won't win by punching a dragon.").css("color", "green");
+            }
+            if($("#q5").val() == "null")
+            {
+                isValid = false;
+                $("#validSubmission5").html("Drink or don't drink. Make your choice.").css("color", "green");
+            }
+            
+            return isValid;
+        }
+        
+        $("#submitButton").click(function(){
+            $("#resultphoto").html("");
+            $("#result").html("");
+            
+            if(!isFormValid()){
+                alert("you must complete the form");
+                return;
+            }
+            
+            let q1r = $("#q1").val();
+            let q2r = $("#q2").val();
+            let q3r = $("#q3").val();
+            let q4r = $("input[name=q4]:checked").val();
+            let q5r = $("#q5").val();
+            /*let q6r = document.getElementById('confirmed').checked;*/
+            
+            if(document.getElementById('confirmed').checked){
+                if(q3r == "yes" && q4r == "cut" && q5r == "yes")
+                {
+                    $("#result").html("You slayed the dragon! Here's your treasure.")
+                    $("#resultphoto").html("<img src='img/treasure.jpg' alt = BonePile width = 189 heigh = 100 />");
+                }
+                else if(q2r < 18){
+                    $("#result").html("Children shouldn't be trying to slay dragons. You died, " + q1r + "!")
+                    $("#resultphoto").html("<img src='img/bones.jpg' alt = BonePile width = 189 heigh = 100 />");
+                }
+                else if(q4r == "powder")
+                {
+                    $("#result").html("Bringing gunpowder to a fight with a fire-breathing monster was a bad idea. You died, " + q1r + "!")
+                    $("#resultphoto").html("<img src='img/bones.jpg' alt = BonePile width = 189 heigh = 100 />");
+                }
+                else
+                {
+                    $("#result").html("Bringing gunpowder to a fight with a fire-breathing monster was a bad idea. You died, " + q1r + "!")
+                    $("#resultphoto").html("<img src='img/bones.jpg' alt = BonePile width = 189 heigh = 100 />");
+                }
+                
+            }
+            else
+            {
+                $("#validSubmission6").html("You've got to check the box!").css("color", "green");
+                return;
+            }
+            
+        });
+        
+        
+    </script>
+</html>
