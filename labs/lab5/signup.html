@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign up </title>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+        /*global $*/
+         $(document).ready(function(){
+            $("#username1").change(function(){
+                // There should be .... 2 ajax calls? this file is not complete, Alyssia is too damn fast
+                $.ajax({
+                    type: "GET", 
+                    url: "api/checkUsername_text.php", 
+                    data: { "username":$("#username1").val() }, 
+                success: function(data, status) {
+                    //alert(data);
+                    $("#username1Error").html(data);
+                },
+                complete: function(data, status){
+                    // Empty body -- for debug
+                }
+                }); // ajax
+            });
+            $("#username2").change(function(){
+               $.ajax({
+                    type: "GET", 
+                    url: "api/checkUsername_json.php", 
+                    dataType: "json", 
+                    data: { "username":$("#username2").val() }, 
+                    
+                success: function(data, status){
+                    //alert(data);
+                    if(data.available){
+                        $("#username2Error").html("Username is available!");
+                        $("#username2Error").css("color", "green");
+                    } else {
+                        $("#username2Error").html("Username is not available!");
+                        $("#username2Error").css("color", "red");
+                    }
+                },
+                failure: function(data, status){
+                    
+                }
+                    
+                }); // ajax
+            });
+        });
+    </script>
+    <body>
+        
+        <fieldset>
+            <legend>
+                Sign Up
+            </legend>
+            
+            First Name: <input type="text" id = "firstName" name = "firstName"/> <br/>
+            Last Name : <input type="text" id = "lastName" name = "lastName"/> <br/>
+            
+            Username:
+            <input type="text" id="username1"/>
+            <span id=username1Error></span><br/>
+            Username: <input type="text" id="username2"/>
+            <span id=username2Error></span><br/>
+            </br>
+            Password: <input type="password" id="password"/>
+            <span id=passwordError></span><br/>
+            
+            <button> Sign Up!</button>
+            
+        </fieldset>
+
+    </body>
+</html>
