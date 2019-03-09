@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign Up - PHP Web API Version </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script>
+            /*global $*/
+            let user2 = true;
+            let pass = true;
+            
+            $(document).ready(function() {
+                $("#username1").change(function() {
+                    $.ajax({
+                        type: "GET",
+                        url: "api/checkUsername_text.php",
+                        data: { "username":$("#username1").val() },
+                        success: function(data,status) {
+                            $("#username1Error").html(data);
+                            $("#username1Error").css("color", "blue");
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                    
+                    });//ajax
+                });
+                
+                $("#username2").change(function() {
+                    $.ajax({
+
+                        type: "GET",
+                        url: "api/checkUsername_json.php",
+                        dataType: "json",
+                        data: { "username":$("#username2").val() },
+                        success: function(data,status) {
+                        //alert(data);
+                            if(data.available){
+                                $("#username2Error").html("Username is available!");
+                                $("#username2Error").css("color", "green");
+                                user2 =  true;
+                            }
+                            else {
+                                $("#username2Error").html("Username is unavailable!");
+                                $("#username2Error").css("color", "red");
+                                user2 = false;
+                            }
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                    
+                    });//ajax  
+                });//username2 change
+                
+                
+                 $("#password").on("click", function(){
+                    
+                    //alert("hi");
+                    
+                    $.ajax({
+
+                        type: "GET",
+                        url: "api/strongPwdAPI.php",
+                        //dataType: 'json',
+                        data: {"length" : "10" },
+                        success: function(data,status) {
+                          
+                          //alert(data.suggestedPwd);
+                           $("#passwordSuggest").html("Suggested Password: " + data).css({"color":"blue", "font-weight":"bold"});
+                          
+                        
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                            //alert(status);
+                            //alert("it went here instead.");
+                        }
+                        
+                    });//ajax
+                    
+                }); //passwordClick 
+                
+                
+             $("#password").on("change", function(){
+                    
+                    //alert("hi");
+                    
+                    $.ajax({
+
+                        type: "GET",
+                        url: "api/validatePwd.php",
+                        dataType: 'json',
+                        data: {"username" : $("#username1").val(),
+                               "pwd" : $("#password").val()},
+                        success: function(data,status) {
+                          //$("#pass2").html(data.validPwd).css("color","blue");
+                          //alert(data.validPwd);
+                          if(data.validPwd == false)
+                          {
+                              $("#passwordSuggest").html("");
+                              $("#pass2").html("Your password and username are too similar").css({"font-style":"italic", "color":"red"});
+                              pass = false;
+                          }
+                          else if(data.validPwd == true){
+                              $("#passwordSuggest").html("");
+                              $("#pass2").html("Password is acceptable.").css("color", "#008080");
+                              pass = true;
+                          }
+                        },
+                        complete: function(data,status) { //optional, used for debugging purposes
+                        //alert(status);
+                        }
+                        
+                    });//ajax
+                    
+                }); //passwordClick                
+                    
+            });//documentReady
+            
+              $("#submitButton").on("click", function() 
+                {
+                    if(pass != true)
+                    {
+                         $("#successful").html("Please fix errors.").css("color", "red");
+                         return;
+                    }
+                    if(user2 != true)
+                    {
+                        $("#successful").html("Please fix errors.").css("color", "red");
+                        return;
+                    }
+                    
+                    /***************************/
+                    $("#successful").html("Account creation successful.").css("color", "blue");
+                    $("#successful").css('font-weight', 'bold');
+                    
+                });
+                
+            
+            
+            
+           
+            
+            
+        </script>
+    </head>
+    
+    <body>
+        
+        <br>
+        <br>
+        
+        <div class="container">
+        <fieldset>
+            <legend>
+                Sign Up
+            </legend>
+            <br>
+            <br>
+            <div class="col">First Name: <input type="text" id="firstName" name="firstName" /></div> <br />
+            <div class="col">Last Name: <input type="text" id="lastName" name="lastName" /></div> <br />
+            
+            <div class="col">Username: <input type="text" id="username1" />
+            <span id="username1Error"></span> <br /></div>
+            <br />
+            
+            <div class="col">Username: <input type="text" id="username2" />
+            <span id="username2Error" class="error"></span> <br /></div>
+            <br />
+            
+            <div class="col">Password: <input type="password" id="password">
+            <span id="passwordSuggest"></span><span id="pass2"></span> </div><br />
+            
+            <div class="col"><input type="submit" value="Sign up!" id="submitButton" class="btn btn-primary"></div>
+            
+            <div class="col"><span id="successful"></span></div>
+            <br>
+            <br>
+        
+        </fieldset>
+        </div>
+    </body>
+    
+    <footer id="footer">
+        
+        <br><br><br>
+          &copy; 2019. Gurpreet Sidhu - CST 336 Internet Programming <br/>
+            <strong>Disclaimer:</strong> The content of this page is fake. It is only intended for educational purposes.
+            
+            <br><br>
+            
+            <img src="../../img/csumb.png" alt = "CSUMB Logo" />
+            
+            <br><br>
+            
+            <img id="shrink" src="../../img/buddy_verified.png" alt = "Buddy Verified"/>
+      </footer>
+</html>

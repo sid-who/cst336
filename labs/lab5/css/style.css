@@ -1,0 +1,23 @@
+body{
+    background-color: navy;
+    
+}
+
+.container{
+    background-color:white;
+    padding-left: 100px;
+    border-radius: 10px;
+    outline: 10px solid gold;
+    outline-offset: 20px;
+    
+}
+
+#shrink{
+    width: 100px;
+    height: 100px;
+}
+
+#footer{
+    text-align:center;
+    color: white;
+}

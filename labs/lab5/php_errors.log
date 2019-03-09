@@ -1,0 +1,60 @@
+[09-Mar-2019 04:01:43 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:01:43 UTC] PHP Stack trace:
+[09-Mar-2019 04:01:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:01:43 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:01:51 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:01:51 UTC] PHP Stack trace:
+[09-Mar-2019 04:01:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:01:51 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:02:38 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:02:38 UTC] PHP Stack trace:
+[09-Mar-2019 04:02:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:02:38 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:02:40 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:02:40 UTC] PHP Stack trace:
+[09-Mar-2019 04:02:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:02:40 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:02:41 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:02:41 UTC] PHP Stack trace:
+[09-Mar-2019 04:02:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:02:41 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:03:14 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:03:14 UTC] PHP Stack trace:
+[09-Mar-2019 04:03:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:03:14 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:10:24 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:10:24 UTC] PHP Stack trace:
+[09-Mar-2019 04:10:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:10:24 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:15:29 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:15:29 UTC] PHP Stack trace:
+[09-Mar-2019 04:15:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:15:29 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:30:14 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:30:14 UTC] PHP Stack trace:
+[09-Mar-2019 04:30:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:30:14 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:30:46 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:30:46 UTC] PHP Stack trace:
+[09-Mar-2019 04:30:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:30:46 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:49:55 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:49:55 UTC] PHP Stack trace:
+[09-Mar-2019 04:49:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:49:55 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:50:35 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:50:35 UTC] PHP Stack trace:
+[09-Mar-2019 04:50:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:50:35 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:51:31 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:51:31 UTC] PHP Stack trace:
+[09-Mar-2019 04:51:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:51:31 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:53:10 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:53:10 UTC] PHP Stack trace:
+[09-Mar-2019 04:53:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:53:10 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22
+[09-Mar-2019 04:53:12 UTC] PHP Warning:  str_shuffle() expects parameter 1 to be string, array given in /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php on line 22
+[09-Mar-2019 04:53:12 UTC] PHP Stack trace:
+[09-Mar-2019 04:53:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:0
+[09-Mar-2019 04:53:12 UTC] PHP   2. str_shuffle() /home/ubuntu/workspace/cst336/labs/lab5/api/strongPwdAPI.php:22

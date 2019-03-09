@@ -1,0 +1,5 @@
+[08-Mar-2019 01:45:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'ottermart'' in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:9
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 9
