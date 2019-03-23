@@ -5,15 +5,6 @@
         $username='root';
         $password='';
         
-        //checks whether the URL contains "herokuapp" (using Heroku)
-        if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
-           $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-           $host = $url["host"];
-           $dbName = substr($url["path"], 1);
-           $username = $url["user"];
-           $password = $url["pass"];
-        }
-        
         //creates db connection
         $dbConn = new PDO("mysql:host=$host;dbname=$dbname",$username,$password);
         
