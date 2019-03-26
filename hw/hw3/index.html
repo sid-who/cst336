@@ -1,29 +1,315 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-        <link rel="stylesheet" href="css/styles.css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
         <title>  </title>
     </head>
     <body>
-        <h1> Something </h1>
         
-        <table class= "table table-bordered">
-            <tr> <!--Table titles-->
-                <th>Here</th>
-                <th>Here2</th>
-                <th>Here3</th>
-            </tr>
+        <script>
+            let p1 = 0;
+            let p2 = 0;
+            let p3 = 0;
+            let p4 = 0;
             
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            let subtotal = 0;
+            let taxfactor = .1;
+            let tax = 0;
+            let total = 0;
+        /*global $*/
+        //-----------For copy pasting only.---------------//
+            $.ajax({
+                type:"GET",
+                url:"",
+                dataType:"json",
+                data:{},
+                success: function(data, status){
+                },
+                complete: function(data, status){
+                    
+                }
+            });
+            //-------------------------//
             
-        </table>
+            $(document).ready(function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"api/getItem.php",
+                        dataType:"json",
+                        data:{},
+                        success: function(data, status){
+                            
+                            $("#special").append("<option>" + " " + "</option>");
+                            
+                            for(let i=0; i < data.length; i++)
+                            {
+                                $("#special").append("<option>" + data[i].specialty + "</option>");
+                            }
+                        },
+                        complete: function(data, status){
+                            
+                        }
+                    });//ajax
+                    
+                     $.ajax({
+                            type:"GET",
+                            url:"api/ingredients.php",
+                            dataType:"json",
+                            data:{},
+                            success: function(data, status){
+                                
+                                $("#extras1").append("<option>" + " " + "</option>");
+                                for(let i=0; i<data.length; i++)
+                                {
+                                    $("#extras1").append("<option>" + data[i].ingredient + "</option>");
+                                }
+                            },
+                            complete: function(data, status){
+                                
+                            }
+                    });//ajax
+                    
+                    $.ajax({
+                            type:"GET",
+                            url:"api/ingredients.php",
+                            dataType:"json",
+                            data:{},
+                            success: function(data, status){
+                                $("#extras2").append("<option>" + " " + "</option>");
+                                for(let i=0; i<data.length; i++)
+                                {
+                                    $("#extras2").append("<option>" + data[i].ingredient + "</option>");
+                                }
+                            },
+                            complete: function(data, status){
+                                
+                            }
+                    });//ajax
+                    
+                    $.ajax({
+                            type:"GET",
+                            url:"api/ingredients.php",
+                            dataType:"json",
+                            data:{},
+                            success: function(data, status){
+                                $("#extras3").append("<option>" + " " + "</option>");
+                                for(let i=0; i<data.length; i++)
+                                {
+                                    $("#extras3").append("<option>" + data[i].ingredient + "</option>");
+                                }
+                            },
+                            complete: function(data, status){
+                                
+                            }
+                    });//ajax
+                
+            });
+            
+            function calc(){
+                subtotal = p1 + p2 + p3 + p4;
+                tax = subtotal * taxfactor;
+                total = subtotal + tax;
+                
+                $("#subtotal").html("$" + subtotal.toFixed(2));
+                $("#taxes").html("$" + tax.toFixed(2));
+                $("#total").html("$" + total.toFixed(2));
+            }
+            
+            $(document).change(function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"api/getItem.php",
+                        dataType:"json",
+                        data:{},
+                        success: function(data, status){
+                            
+                            let choice = $("#special").val();
+                            
+                            for(let i=0; i < data.length; i++)
+                            {
+                                if(choice == data[i].specialty)
+                                {
+                                    $("#price").html("$" + data[i].cost);
+                                    p1 = data[i].cost;
+                                    calc();
+                                }
+                            }
+                        },
+                        complete: function(data, status){
+                            
+                        }
+                    });//ajax
+                    
+                    $.ajax({
+                        type:"GET",
+                        url:"api/ingredients.php",
+                        dataType:"json",
+                        data:{},
+                        success: function(data, status){
+                            
+                            let choice = $("#extras1").val();
+                            
+                            for(let i=0; i < data.length; i++)
+                            {
+                                if(choice == data[i].ingredient)
+                                {
+                                    $("#price1").html("$" + data[i].cost);
+                                    p2 = data[i].cost;
+                                    calc();
+                                }
+                            }
+                        },
+                        complete: function(data, status){
+                            
+                        }
+                    });//ajax
+                    
+                    $.ajax({
+                        type:"GET",
+                        url:"api/ingredients.php",
+                        dataType:"json",
+                        data:{},
+                        success: function(data, status){
+                            
+                            let choice = $("#extras2").val();
+                            
+                            for(let i=0; i < data.length; i++)
+                            {
+                                if(choice == data[i].ingredient)
+                                {
+                                    $("#price2").html("$" + data[i].cost);
+                                    p3 = data[i].cost;
+                                    calc();
+                                }
+                            }
+                        },
+                        complete: function(data, status){
+                            
+                        }
+                    });//ajax
+                    
+                    $.ajax({
+                        type:"GET",
+                        url:"api/ingredients.php",
+                        dataType:"json",
+                        data:{},
+                        success: function(data, status){
+                            
+                            let choice = $("#extras3").val();
+                            
+                            for(let i=0; i < data.length; i++)
+                            {
+                                if(choice == data[i].ingredient)
+                                {
+                                    $("#price3").html("$" + data[i].cost);
+                                    p4 = data[i].cost;
+                                    calc();
+                                }
+                            }
+                        },
+                        complete: function(data, status){
+                            
+                        }
+                    });//ajax
+                    
+                    
+            });//on change
+            
+            $("#submitButton").on("click", function(){
+                //ordercomp();
+                //$("#result").html("Your order has been placed.");
+                alert("hi");
+            });
+            
+            /*function ordercomp(){
+                $("#summary").html("Your order is being prepared, " + $("#name").val() + "! We'll call you to the counter when it's ready"
+                + "\n Order Summary - " + $("#special").val());
+                
+                if($("#extras1").val() != " ")
+                {
+                    $("#summary").append("\n Added..." + $("#extras1").val());
+                }
+                if($("#extras2").val() != " ")
+                {
+                    $("#summary").append("\n Added..." + $("#extras2").val());
+                }
+                if($("#extras3").val() != " ")
+                {
+                    $("#summary").append("\n Added..." + $("#extras3").val());
+                }
+            }*/
+            
+            
+        </script>
+        
+        <h1 id="logo"> Honest Eric's Sundae Parlour </h1>
+        
+        <h5 id="claim">Rodent free since '18! ... 2018! </h5>
+        
+        <div id="formBorder">
+            <table class= "table table-bordered">
+                <tr> <!--Table titles-->
+                    <td id="title"> Welcome to Honest Abe's! What would you like to order today? </td>
+                    
+                </tr>
+                
+                <tr>
+                    <td id="title">Select a Specialty: <select id="special"></select>
+                    </td>
+                    <td id="title"><span id="price"></span></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td id="title">First Addon: <select id="extras1"></select></td>
+                    <td id="title"><span id="price1"></span></td>
+                </tr>
+                
+                <tr>
+                    <td id="title">Second Addon: <select id="extras2"></select></td>
+                    <td id="title"><span id="price2"></span></td>
+                </tr>
+                
+                <tr>
+                    <td id="title">Third Addon: <select id="extras3"></select></td>
+                    <td id="title"><span id="price3"></span></td>
+                </tr>
+                
+                
+                <tr>
+                    <td id="title"> Subtotal </td>
+                    <td id="title"><span id="subtotal"></span></td>
+                </tr>
+                
+                <tr>
+                    <td id="title"> Taxes </td>
+                    <td id="title"><span id="taxes"></span></td>
+                </tr>
+                
+                <tr>
+                    <td id="title"> Total </td>
+                    <td id="title"><span id="total"></span></td>
+                </tr>
+                
+                 <tr>
+                    <td id="title">What's your name? <input type="text" id="name"></td>
+                </tr>
+                
+                 <tr>
+                    <td><button id=submitButton> Place your order </button></td>
+                </tr>
+                
+                <tr>
+                    <td id="title"><span id="result"></span></td>
+                </tr>
+                
+            </table>
+            
+            
+        </div>
 
     </body>
 </html>

@@ -1,0 +1,84 @@
+
+body{
+    /*background-color: black;*/
+    background-image: url("../img/ice.jpg");
+    background-size: cover;
+    
+}
+
+label{
+    display:inline-block;
+    /*padding:5px;
+    color:#222;
+    /*font-family:corbel,sans-serif;*/
+    font-size: 14px;
+    /*margin: 10px;*/
+    vertical-align: middle;
+}
+
+#formBorder{
+    background: #98ffcc;
+    color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-radius:15px;
+}
+
+table.table-bordered{
+    border:1px solid blue;
+    margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+    border:1px solid blue;
+}
+table.table-bordered > tbody > tr > td{
+    border:1px solid blue;
+}
+
+#title{
+    font-family: monospace;
+    font-weight: bold;
+    color: blue;
+}
+
+#logo{
+    font-family: cursive;
+    font-style: italic;
+    color: blue;
+    text-align: center;
+    background: #98ffcc;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-radius:15px;
+}
+
+#claim{
+    font-family: monospace;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+#submitButton{
+    background-color:#00cc99;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+
