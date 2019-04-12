@@ -106,7 +106,31 @@
                             }
                     });//ajax
                 
-            });
+                $("#submitButton").on("click", function(){
+                    ordercomp();
+                    //$("#result").html("Your order has been placed.");
+                    //alert("hi");
+                });
+            
+                function ordercomp(){
+                    $("#summary").html("Your order is being prepared, " + $("#name").val() + "! We'll call you to the counter when it's ready"
+                    + "\n Order Summary - " + $("#special").val());
+                    
+                    if($("#extras1").val() != " ")
+                    {
+                        $("#summary").append("\n Added..." + $("#extras1").val());
+                    }
+                    if($("#extras2").val() != " ")
+                    {
+                        $("#summary").append("\n Added..." + $("#extras2").val());
+                    }
+                    if($("#extras3").val() != " ")
+                    {
+                        $("#summary").append("\n Added..." + $("#extras3").val());
+                    }
+                }
+                
+            });//document ready
             
             function calc(){
                 subtotal = p1 + p2 + p3 + p4;
@@ -218,29 +242,7 @@
                     
             });//on change
             
-            $("#submitButton").on("click", function(){
-                //ordercomp();
-                //$("#result").html("Your order has been placed.");
-                alert("hi");
-            });
             
-            /*function ordercomp(){
-                $("#summary").html("Your order is being prepared, " + $("#name").val() + "! We'll call you to the counter when it's ready"
-                + "\n Order Summary - " + $("#special").val());
-                
-                if($("#extras1").val() != " ")
-                {
-                    $("#summary").append("\n Added..." + $("#extras1").val());
-                }
-                if($("#extras2").val() != " ")
-                {
-                    $("#summary").append("\n Added..." + $("#extras2").val());
-                }
-                if($("#extras3").val() != " ")
-                {
-                    $("#summary").append("\n Added..." + $("#extras3").val());
-                }
-            }*/
             
             
         </script>

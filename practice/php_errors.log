@@ -1,0 +1,15 @@
+[25-Mar-2019 20:09:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php(8): PDO->prepare('select * from m...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php on line 8
+[25-Mar-2019 20:14:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php(8): PDO->prepare('select * from m...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php on line 8
+[25-Mar-2019 20:16:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected' in /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php(8): PDO->prepare('select * from m...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/practice/midterm-practice/getAll.php on line 8
