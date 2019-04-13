@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+
+#here{
+    text-align: center;
+}
+
+#buttons{
+    text-align: center;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

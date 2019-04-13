@@ -1,16 +1,24 @@
 <?php
-    function getDatabaseConnection($dbname = 'ottermart'){
-        $host = 'localhost';//cloud9
-        //$dbname='tcp';
-        $username='root';
-        $password='';
+
+    function getDatabaseConnection($dbName) {
+    
+        $host = "localhost";
+        $username = "root";
+        $password = "";
         
-        //creates db connection
-        $dbConn = new PDO("mysql:host=$host;dbname=$dbname",$username,$password);
+        //checks whether the URL contains "herokuapp" (using Heroku)
+        if(strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
+           $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+           $host = $url["host"];
+           $dbName = substr($url["path"], 1);
+           $username = $url["user"];
+           $password = $url["pass"];
+        }
         
-        //display errors when accessing tables
-        $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $dbConn = new PDO("mysql:host=$host;dbname=$dbName", $username, $password);
+        $dbConn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
         
         return $dbConn;
+    
     }
 ?>
