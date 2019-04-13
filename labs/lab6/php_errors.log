@@ -120,3 +120,18 @@ Stack trace:
 [13-Apr-2019 03:00:44 UTC] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 17
 [13-Apr-2019 03:00:44 UTC] PHP Stack trace:
 [13-Apr-2019 03:00:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 19:38:42 UTC] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 17
+[13-Apr-2019 19:38:42 UTC] PHP Stack trace:
+[13-Apr-2019 19:38:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 19:42:51 UTC] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 17
+[13-Apr-2019 19:42:51 UTC] PHP Stack trace:
+[13-Apr-2019 19:42:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 19:42:56 UTC] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 17
+[13-Apr-2019 19:42:56 UTC] PHP Stack trace:
+[13-Apr-2019 19:42:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 19:43:32 UTC] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 17
+[13-Apr-2019 19:43:32 UTC] PHP Stack trace:
+[13-Apr-2019 19:43:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 19:48:46 UTC] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 17
+[13-Apr-2019 19:48:46 UTC] PHP Stack trace:
+[13-Apr-2019 19:48:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0

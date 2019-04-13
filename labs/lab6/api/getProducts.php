@@ -14,7 +14,7 @@ $conn = getDatabaseConnection("ottermart");
 //$dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
 // Setting Errorhandling to Exception
-//$dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 $sql = "SELECT * FROM om_product ORDER BY productPrice";

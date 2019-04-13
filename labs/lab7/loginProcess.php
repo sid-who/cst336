@@ -25,8 +25,15 @@ $record = $stmt->fetch(PDO::FETCH_ASSOC); //we are expecting ONLY one record, so
  
  if (empty($record)) {
      
-     echo "Username or Password are incorrect!";
+     //echo "Username or Password are incorrect!";
+     $message = "Username or Password are incorrect!";
+     echo "<script type='text/javascript'>
+              
+              alert('$message');
+              window.location.href = 'login.html'; 
      
+          </script>";
+     //header('location: login.html'); //redirecting to the login page.
      
  }  else {
  
