@@ -98,3 +98,25 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336/labs/lab6/api/getSearchResult.php(53): PDOStatement->execute(Array)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336/labs/lab6/api/getSearchResult.php on line 53
+[13-Apr-2019 02:48:58 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 21
+[13-Apr-2019 02:48:58 UTC] PHP Stack trace:
+[13-Apr-2019 02:48:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 02:49:03 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 21
+[13-Apr-2019 02:49:03 UTC] PHP Stack trace:
+[13-Apr-2019 02:49:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 02:49:11 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 21
+[13-Apr-2019 02:49:11 UTC] PHP Stack trace:
+[13-Apr-2019 02:49:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
+[13-Apr-2019 02:54:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php(15): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 15
+[13-Apr-2019 03:00:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)' in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php(15): PDO->__construct('mysql:host=;dbn...', NULL, NULL)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 15
+[13-Apr-2019 03:00:44 UTC] PHP Fatal error:  Call to a member function setAttribute() on a non-object in /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php on line 17
+[13-Apr-2019 03:00:44 UTC] PHP Stack trace:
+[13-Apr-2019 03:00:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab6/api/getProducts.php:0
