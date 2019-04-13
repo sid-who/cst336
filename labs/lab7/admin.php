@@ -132,7 +132,7 @@ if (!isset($_SESSION['adminName'])) {
 </button>
 
 <!-- Modal -->
-<div>
+
     <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -151,7 +151,7 @@ if (!isset($_SESSION['adminName'])) {
         </div>
       </div>
     </div>
-</div>
+
 
 
     </body>
