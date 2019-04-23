@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> OMDb API Demo </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            body{
+                text-align: center;
+            }
+            
+            #previousSearches{
+                font-weight:bold;
+            }
+            
+            .span4 img {
+                margin-right: 10px;
+            }
+            .span4 .img-left {
+                float: left;
+            }
+            .span4 .img-right {
+                float: right;
+            }
+            
+            #formBorder{
+                background: #98ffcc;
+                color: blue;
+                
+                padding-top: 15px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 15px;
+                border-radius:15px;
+            }
+            
+        </style>
+        
+        <script>
+            /*global $*/
+            
+            //-----------For copy pasting only.---------------//
+            $.ajax({
+                type:"GET",
+                url:"",
+                dataType:"json",
+                data:{},
+                success: function(data, status){
+                },
+                complete: function(data, status){
+                    
+                }
+            });
+            //-------------------------//
+            
+            
+            $(document).ready(function(){
+                
+                $("#submit").hide();
+                $("#reset").hide();
+                $("#searchTitle").hide();
+                $("#searchDirect").hide();
+                $("#searchYear").hide();
+                
+                function printsearch(){
+                        $.ajax({
+                            type:"GET",
+                            url:"api/getHistory.php",
+                            dataType:"json",
+                            data:{},
+                            success: function(data, status){
+                                data.forEach(function(stored){
+                                    let temp = stored.url;
+                                    //alert(temp);
+                                    //$("#previous").append("<img src='temp' />");
+                                    //$("#previous").append('<img src="temp" />')
+                                    //$("#previous").append($("#pre").attr("src", temp));
+                                    $("#previous").append(stored.name + "<br>");
+                                    //alert(data.name);
+                                });
+                            },
+                            complete: function(data, status){
+                                
+                            }
+                        });
+                    }// end of search history
+                    
+                    printsearch();
+                
+                
+                
+                $("#submit").on("click", function(){
+                    $.ajax({
+                        type:"GET",
+                        url:"api/omdp_proxy.php",
+                        dataType:"json",
+                        data:{"t":$("#searchTitle").val(),
+                            "y":$("#searchYear").val(),
+                            "d":$("#searchDirect").val(),
+                        },
+                        success: function(data, status){
+                            $("#dlabels").show();
+                            $("#dlabels2").show();
+                            $("#dlabels3").show();
+                            
+                            $("#dlabels4").show();
+                            $("#dlabels5").show();
+                            $("#dlabels6").show();
+                            
+                            $("#dlabels7").show();
+                            $("#dlabels8").show();
+                            
+                            $("#poster").attr("src", data[0]);
+                            $("#r-title").html(data[1] + "<br/>");
+                            $("#r-year").html(data[2] + "<br/>");
+                            $("#r-rated").html(data[3] + "<br/>");
+                            
+                            $("#r-release").html(data[4] + "<br/>");
+                            $("#r-genre").html(data[5] + "<br/>");
+                            $("#r-writer").html(data[6] + "<br/>");
+                            
+                            $("#r-director").html(data[7] + "<br/>");
+                            $("#r-plot").html(data[8] + "<br/>");
+                            
+                            let tempurl = data[0];
+                            let tempname = data[1];
+                            
+                            updateDB(tempurl, tempname);
+                            
+                            
+                            /* FOR REFERENCE ONLY.
+                            <span id="r-title"></span>
+                            <span id="r-year"></span>
+                            <span id="r-release"></span>
+                            <span id="r-genre"></span>
+                            
+                            <span id="r-rated"></span>
+                            <span id="r-director"></span>
+                            <span id="r-writer"></span>
+                            <span id="r-plot"></span>*/
+                        },
+                        complete: function(data, status){
+                            
+                        }
+                    });//end ajax
+                    
+                    function updateDB(url, name){
+                       //alert(url);
+                       //alert(name);
+                        $.ajax({
+                            type:"GET",
+                            url:"api/procsearch.php",
+                            dataType:"json",
+                            data:{"url": url,
+                                "name": name
+                            },
+                            success: function(data, status){
+                                
+                            },
+                            complete: function(data, status){
+                                
+                            }
+                        }); 
+                        
+                    }//end of function update
+                    
+                    
+                });
+                
+                $("#reset").on("click", function(){
+                    window.location.reload();
+                    
+                });
+                
+                $("#select").on("click", function(){
+                    let choice = $("#choice").val();
+                    if(choice == "title")
+                    {
+                        $("#label").html("Search by Title: ");
+                        //$("#uin").html('<input type="text" id="searchTitle" />');
+                        $("#searchTitle").show();
+                        $("#select").hide();
+                        $("#reset").show();
+                        $("#submit").show();
+                    }
+                    else if(choice == "year")
+                    {
+                        $("#label").html("Search by Year Released: ");
+                        //$("#uin").html('<input type="text" id="searchYear" />');
+                        $("#searchYear").show();
+                        $("#select").hide();
+                        $("#reset").show();
+                        $("#submit").show();
+                    }
+                    else if(choice == "direct")
+                    {
+                        $("#label").html("Search by Director: ");
+                        //$("#uin").html('<input type="text" id="searchDirect" />');
+                        $("#searchDirect").show();
+                        $("#select").hide();
+                        $("#reset").show();
+                        $("#submit").show();
+                    }
+                
+                });
+                
+            });
+            
+            
+        </script>
+        
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>OMDb Movie Search</h1>
+        </div>
+        
+        <div id="formBorder">
+            Search by - 
+            <select id="choice">
+                <option value="null"></option>
+                <option value="title">Title</option>
+                <option value="year">Year Released</option>
+                <option value="direct">Director</option>
+            </select>
+            <br><br>
+            
+            <span id="label"></span><span id="uin"></span>
+            <input type="text" id="searchTitle" />
+            <input type="text" id="searchYear" />
+            <input type="text" id="searchDirect" />
+            <div id="formBorder">
+                
+            </div>
+            <div class="container">
+                
+                <div class="block">
+                    <div id="result">
+                        <div class = "row">
+                            <div class="span4">
+                                <img class="img-left" src="" id="poster" alt="">
+                                <div class="content-heading">
+                                    <span id="dlabels" style="display:none;">Title - </span><span id="r-title"></span>
+                                    <span id="dlabels2" style="display:none;">Year Released - </span><span id="r-year"></span>
+                                    <span id="dlabels3" style="display:none;">Release Date - </span><span id="r-release"></span>
+                                    <span id="dlabels4" style="display:none;">Genre - </span><span id="r-genre"></span>
+                                    
+                                    <span id="dlabels5" style="display:none;">Rating - </span><span id="r-rated"></span>
+                                    <span id="dlabels6" style="display:none;">Director(s) - </span><span id="r-director"></span>
+                                    <span id="dlabels7" style="display:none;">Writer(s) - </span><span id="r-writer"></span>
+                                    <span id="dlabels8" style="display:none;">What's it about? - </span><span id="r-plot"></span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" id="select">Select</button>
+        <button class="btn btn-primary" id="submit">Search</button>
+        <button class="btn btn-primary" id="reset">Reset</button>
+        
+        <br><br>
+
+    </body>
+    <div id="formBorder">
+        <span id="previousSearches">Previous Searches</span>
+        <div id="previous"><br>
+            <img src="" id="pre" alt="">
+        </div>
+    </div>
+    
+</html>

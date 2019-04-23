@@ -1,0 +1,82 @@
+[23-Apr-2019 18:07:31 UTC] PHP Fatal error:  Call to undefined function alert() in /home/ubuntu/workspace/cst336/hw/hw4/api/omdp_proxy.php on line 25
+[23-Apr-2019 18:07:31 UTC] PHP Stack trace:
+[23-Apr-2019 18:07:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw4/api/omdp_proxy.php:0
+[23-Apr-2019 18:35:42 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/cst336/hw/hw4/api/omdp_proxy.php on line 28
+[23-Apr-2019 18:35:42 UTC] PHP Stack trace:
+[23-Apr-2019 18:35:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw4/api/omdp_proxy.php:0
+[23-Apr-2019 18:42:24 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/cst336/hw/hw4/api/omdp_proxy.php on line 36
+[23-Apr-2019 21:18:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'url' cannot be null' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 15
+[23-Apr-2019 21:20:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'url' cannot be null' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 15
+[23-Apr-2019 21:21:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(16): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 16
+[23-Apr-2019 21:22:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'url' cannot be null' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 15
+[23-Apr-2019 21:22:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'url' cannot be null' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(15): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 15
+[23-Apr-2019 21:23:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(16): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 16
+[23-Apr-2019 21:23:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(16): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 16
+[23-Apr-2019 21:25:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(16): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 16
+[23-Apr-2019 21:26:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(16): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 16
+[23-Apr-2019 21:32:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(16): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 16
+[23-Apr-2019 21:32:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(16): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 16
+[23-Apr-2019 21:37:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(19): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 19
+[23-Apr-2019 22:01:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(19): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 19
+[23-Apr-2019 22:09:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(19): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 19
+[23-Apr-2019 22:09:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(19): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 19
