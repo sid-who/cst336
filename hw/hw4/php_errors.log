@@ -90,3 +90,8 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(19): PDOStatement->fetch(2)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 19
+[23-Apr-2019 22:21:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:18
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(18): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 18
