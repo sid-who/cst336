@@ -12,7 +12,6 @@
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //use fetch for one record, fetchAll for multiple
     
     rsort($records);
-    print_r($records);
     echo json_encode($records);
 
 
