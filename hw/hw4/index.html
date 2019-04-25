@@ -86,6 +86,7 @@
                                 });
                             },
                             complete: function(data, status){
+                                // /challenges/gallery_pixabay/favorites.html?
                                 
                             }
                         });
@@ -96,11 +97,13 @@
                 
                 
                 $("#submit").on("click", function(){
+                    let tempstr = $("#searchTitle").val();
+                    let newstr = tempstr.replace(/ /g,"_");
                     $.ajax({
                         type:"GET",
                         url:"api/omdp_proxy.php",
                         dataType:"json",
-                        data:{"t":$("#searchTitle").val(),
+                        data:{"t":newstr,
                             "y":$("#searchYear").val(),
                             "d":$("#searchDirect").val(),
                         },

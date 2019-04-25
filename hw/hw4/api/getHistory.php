@@ -5,12 +5,14 @@
     
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    $sql = "SELECT * FROM hw4_prev WHERE 1";
+    $sql = "SELECT DISTINCT name FROM `hw4_prev`";
+    //SELECT DISTINCT keyword FROM `lab8_pixabay
     $stmt = $conn -> prepare($sql);  //$connection MUST be previously initialized
     $stmt->execute();
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC); //use fetch for one record, fetchAll for multiple
     
     rsort($records);
+    print_r($records);
     echo json_encode($records);
 
 
