@@ -4,16 +4,48 @@
 <title> Pixabay API Demo </title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <style>
-body {
-text-align: center;
-}
-img {
-    border-radius: 20px;
-    padding:15px;
-}
-.favorite{
-    cursor: pointer;
-}
+    body {
+        text-align: center;
+        font-family: monospace;
+        color: blue;
+    }
+    img {
+        border-radius: 20px;
+        padding:15px;
+    }
+    .favorite{
+        cursor: pointer;
+    }
+    .buttonstyle{
+        background-color:#42e5bc;
+        border: none;
+        color: blue;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        
+        font-family: monospace;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 9px;
+    }
+    .jumbo{
+        /*background-color: #42e5bc;*/
+        background-image: url("img/banner.jpg");
+        border-radius: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .letters{
+        background-color:white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #shrink{
+        width: 100px;
+        height: 100px;
+    }
 </style>
 <script>
     /*global $*/
@@ -100,17 +132,33 @@ img {
 </script>
 </head>
 <body>
-
-<h1> Pixabay Image Search </h1>
-Keyword: <input type="text" id="keyword"/> 
-<button onclick="searchImage()"> Search </button>
-<br /><br />
-
-<div id="images"></div>
-
-<form action="viewFavorites.php">
-    <button> View Favorites </button>
-</form>
+    <div class="jumbo">
+        <h1 class="letters"> Pixabay Image Search </h1>    
+    </div><br><br>
+    
+    Keyword: <input type="text" id="keyword"/> 
+    <button class="buttonstyle" onclick="searchImage()"> Search </button>
+    <br /><br />
+    <div>
+        <div id="images"></div>    
+    </div>
+    
+    
+    <form action="viewFavorites.php">
+        <button class="buttonstyle"> View Favorites </button>
+    </form>
 
 </body>
+<br><br><br>
+<hr><br><br>
+<footer>
+          &copy; 2019. Gurpreet Sidhu - CST 336 Internet Programming <br/>
+            <strong>Disclaimer:</strong> The content of this page is fake. It is only intended for educational purposes.
+            
+            <br><br>
+            
+            <img src="../../img/csumb.png" alt = "CSUMB Logo" />
+            
+            <img id="shrink" src="../../img/buddy_verified.png" alt = "Buddy Verified"/>
+      </footer>
 </html>

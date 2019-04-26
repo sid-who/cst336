@@ -1,43 +1,42 @@
 <?php
 
 //receives these parameters: action, url, keyword
+ include '../../../inc/dbConnection.php';
+ $conn = getDatabaseConnection("c9");
 
-//TO GET THE 2 EXTRA POINTS IN THE HANDS-ON PORTION OF THE FINAL EXAM
-//1. Add favorites to database
-//2. Remove favorites from database
-//3. Display the keyword list from database (use DISTINCT)
+ $action = $_GET['action'];
 
-  include '../../../inc/dbConnection.php';
-  $conn = getDatabaseConnection("pixabayFavorites");
-  
-  $arr = array();
-
-  switch (action) {
-      
-      case "add":
-        $arr[":url"] = $_GET["url"];
-        $arr[":keyword"] = $_GET["keyword"];
+ $np = array();
+ 
+  switch ($action) {
         
-        $sql = "INSERT INTO fave ( `url`, `keyword`) VALUES (:url, :keyword)";
-                 break;
-                 
+        case "add":    $sql = "INSERT INTO lab8_pixabay (imageURL, keyword) VALUES (:favorite, :keyword)";
+                       $np[':keyword'] = $_GET['keyword'];
+                       $np[':favorite'] = $_GET['favorite'];
+                       break;
+        case "delete":  $sql = "DELETE FROM lab8_pixabay WHERE imageURL = :favorite";
+                        $np[':favorite'] = $_GET['favorite'];
+                        break;
+        case "keyword": //displays list of unique keywords (hint: use DISTINCT)
+                        $sql = "SELECT DISTINCT(keyword) FROM lab8_pixabay";
+                        break;
+        case "favorites": //display favorite images based on the keyword 
+                        $sql = "SELECT imageURL FROM `lab8_pixabay` WHERE keyword = :keyword";
+                        $np[':keyword'] = $_GET['keyword'];
+                        break;
+                        
+    }//switch
 
-      case "delete":
-        $arr[":url"] = $_GET["url"];
-        
-        $sql = "DELETE FROM `fave` WHERE `fave`.`url` = :url";
-        
-                 break;
-                 
-      
-  }//switch
-  
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($arr);
-        $sql ="SELECT COUNT(1) totalproducts FROM fave";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $records = $stmt->fetch(PDO::FETCH_ASSOC);
-        echo json_encode($records);
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($np);
+    
+    //fetching records when using SELECT
+    if ( $action == "keyword" || $action == "favorites") {
+     
+         $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+         
+         echo json_encode($records);
+    }
 
 ?>

@@ -175,3 +175,8 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(19): PDOStatement->fetch(2)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 19
+[26-Apr-2019 00:01:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php:19
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php(19): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/hw/hw4/api/procsearch.php on line 19

@@ -99,13 +99,15 @@
                 $("#submit").on("click", function(){
                     let tempstr = $("#searchTitle").val();
                     let newstr = tempstr.replace(/ /g,"_");
+                    let dstr = $("#searchDirect").val();
+                    let dstrnew = dstr.replace(/ /g,"_");
                     $.ajax({
                         type:"GET",
                         url:"api/omdp_proxy.php",
                         dataType:"json",
                         data:{"t":newstr,
                             "y":$("#searchYear").val(),
-                            "d":$("#searchDirect").val(),
+                            "d":dstrnew,
                         },
                         success: function(data, status){
                             $("#dlabels").show();
