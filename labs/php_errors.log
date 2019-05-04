@@ -14,3 +14,6 @@
 [27-Feb-2019 01:38:24 UTC] PHP Stack trace:
 [27-Feb-2019 01:38:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab5/checkUsername_text.php:0
 [27-Feb-2019 01:38:24 UTC] PHP   2. in_array() /home/ubuntu/workspace/cst336/labs/lab5/checkUsername_text.php:9
+[04-May-2019 19:17:13 UTC] PHP Fatal error:  Call to undefined function dbConnection() in /home/ubuntu/workspace/cst336/labs/lab9/index.php on line 63
+[04-May-2019 19:17:13 UTC] PHP Stack trace:
+[04-May-2019 19:17:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/labs/lab9/index.php:0
