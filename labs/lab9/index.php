@@ -2,14 +2,14 @@
 
  if (!empty($_FILES)) {
 
-    print_r($_FILES);
+    //print_r($_FILES);
     
-    echo "Image size: " . $_FILES['myFile']['size'];
+   // echo "Image size: " . $_FILES['myFile']['size'];
     
     if($_FILES['file']['size'] > 1048576)
     {
         $error = "File too large, must be smaller than 1MB";
-        echo "<script type='text/javascript'>alert(<?php echo $error; ?>);</script>";
+        echo "<script type='text/javascript'>alert('File too large, must be smaller than 1MB');</script>";
         unlink( $_FILES['myfile']['tmp_name']);
         
     }
@@ -31,7 +31,7 @@
         
         for ($i = 2; $i < count($images); $i++) {
             
-            echo "<img src='gallery/$images[$i]' width='50' />";
+            echo "<img class='images' src='gallery/$images[$i]' width='90' />";
             
         }//for
     
@@ -52,7 +52,7 @@
             
             img { padding: 10px; }
             
-            img:hover { width: 250px; }
+            /*img:hover { width: 250px; }*/
             
             #formBorder{
                 /*background: #98ffcc;*/
@@ -64,12 +64,39 @@
                 padding-bottom: 15px;
                 border-radius:15px;
             }
+            .jumbotron{
+                background-color: gold;
+            }
+            body{
+                font-family: monospace;
+                color: blue;
+                font-size: large;
+            }
             
         </style>
+        
+        <script>
+        /*global $*/
+            $(document).ready(function(){
+                $(".temp").on("click", ".images", function(){
+                    //alert("started");
+                    //alert($(this).width());
+                    if($(this).width() != 600)
+                    {
+                        $(this).width(600);
+                    }
+                    else
+                    {
+                        $(this).width(60);
+                    }
+                });
+            });//end of document ready
+        </script>
     </head>
     <body>
         
-        <br><br><br><br>
+        <center><h1 class="jumbotron"> Image Upload</h1></center>
+        <br><br><br>
         <center>
         <form  method="POST" enctype="multipart/form-data" class="btn btn-warning">
         
@@ -83,9 +110,11 @@
         <center><h3> Images uploaded: </h3></center>
         
         <center>
-        <div id="formBorder" class="btn btn-warning">
-            <?= displayImagesUploaded() ?>
-        </div>
+            <div class="btn btn-warning">
+                <div id="formBorder" class="temp">
+                    <?= displayImagesUploaded() ?>
+                </div>
+            </div>
         </center>
         
         <?php
