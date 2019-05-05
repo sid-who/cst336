@@ -72,6 +72,10 @@
                 color: blue;
                 font-size: large;
             }
+            #shrink{
+                width: 100px;
+                height: 100px;
+            }
             
         </style>
         
@@ -124,6 +128,20 @@
         
         ?>
     </body>
+    <br><br><br>
+    
+    <center>
+        <footer>
+          &copy; 2019. Gurpreet Sidhu - CST 336 Internet Programming <br/>
+            <strong>Disclaimer:</strong> The content of this page is fake. It is only intended for educational purposes.
+            
+            <br><br>
+            
+            <img src="../../img/csumb.png" alt = "CSUMB Logo" />
+            
+            <img id="shrink" src="../../img/buddy_verified.png" alt = "Buddy Verified"/>
+      </footer>
+    </center>
 </html>
 
 
