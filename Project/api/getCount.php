@@ -6,7 +6,7 @@
 //SELECT * FROM `jy_product` ORDER BY `productPrice` ASC LIMIT 1  //gets the product with the lowest price
 //SELECT COUNT(1) FROM `jy_product` WHERE 1 //gets total products
 
- include '../../inc/dbConnection.php';
+ include 'inc/dbConnection.php';
 $dbConn = getDatabaseConnection("junkyard");
 
 //Connecting to database

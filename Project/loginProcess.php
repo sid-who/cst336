@@ -3,7 +3,7 @@ session_start();
 
 //print_r($_POST);
 
-include '../inc/dbConnection.php';
+include 'api/inc/dbConnection.php';
 
 $conn = getDatabaseConnection("junkyard");
 

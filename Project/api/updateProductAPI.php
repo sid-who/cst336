@@ -6,7 +6,7 @@ if(!isset($_SESSION['adminName'])){
     exit;
 }
 
-include '../../inc/dbConnection.php';
+include 'inc/dbConnection.php';
 
 $conn = getDatabaseConnection("junkyard");
 

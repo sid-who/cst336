@@ -1,7 +1,7 @@
 <?php
 session_start();
     
-include '../inc/dbConnection.php';
+include 'api/inc/dbConnection.php';
     
 $conn = getDatabaseConnection("junkyard");
 

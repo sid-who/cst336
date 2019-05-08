@@ -1,5 +1,5 @@
 <?php
-    include '../../inc/dbConnection.php';
+    include 'inc/dbConnection.php';
     $conn = getDatabaseConnection("junkyard");
     
     $arr = array();

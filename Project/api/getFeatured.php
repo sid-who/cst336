@@ -1,5 +1,5 @@
 <?php
-    include '../../inc/dbConnection.php';
+    include 'inc/dbConnection.php';
     $dbConn = getDatabaseConnection("junkyard");
     
     $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

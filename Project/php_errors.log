@@ -1349,3 +1349,80 @@ Stack trace:
 #0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
 #1 {main}
   thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:53:54 UTC] PHP Warning:  include(inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 2
+[08-May-2019 19:53:54 UTC] PHP Stack trace:
+[08-May-2019 19:53:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:53:54 UTC] PHP Warning:  include(): Failed opening 'inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 2
+[08-May-2019 19:53:54 UTC] PHP Stack trace:
+[08-May-2019 19:53:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:53:54 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 3
+[08-May-2019 19:53:54 UTC] PHP Stack trace:
+[08-May-2019 19:53:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:54:15 UTC] PHP Warning:  include(inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 2
+[08-May-2019 19:54:15 UTC] PHP Stack trace:
+[08-May-2019 19:54:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:54:15 UTC] PHP Warning:  include(): Failed opening 'inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 2
+[08-May-2019 19:54:15 UTC] PHP Stack trace:
+[08-May-2019 19:54:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:54:15 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 3
+[08-May-2019 19:54:15 UTC] PHP Stack trace:
+[08-May-2019 19:54:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:54:21 UTC] PHP Warning:  include(inc/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 2
+[08-May-2019 19:54:21 UTC] PHP Stack trace:
+[08-May-2019 19:54:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:54:21 UTC] PHP Warning:  include(): Failed opening 'inc/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 2
+[08-May-2019 19:54:21 UTC] PHP Stack trace:
+[08-May-2019 19:54:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:54:21 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php on line 3
+[08-May-2019 19:54:21 UTC] PHP Stack trace:
+[08-May-2019 19:54:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Project/api/getCartInfo.php:0
+[08-May-2019 19:56:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:56:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:56:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:56:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:56:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:56:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:56:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:56:59 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:57:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21
+[08-May-2019 19:57:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/ubuntu/workspace/cst336/Project/api/addToCart.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/Project/api/addToCart.php(21): PDOStatement->fetch(2)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/Project/api/addToCart.php on line 21

@@ -9,7 +9,7 @@ $password = "";*/
 //SELECT AVG(productPrice) FROM `jy_product` WHERE 1 //gets the average price of all products
 //SELECT * FROM `jy_product` ORDER BY `productPrice` DESC LIMIT 1  //gets the product with the highest price
 
-include '../../inc/dbConnection.php';
+include 'inc/dbConnection.php';
 $dbConn = getDatabaseConnection("junkyard");
 
 //Connecting to database
