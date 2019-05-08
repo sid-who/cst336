@@ -1,0 +1,32 @@
+h1{
+    background-color: orange;
+    text-align:center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family:'Just Another Hand', cursive;
+}
+
+#mainbody{
+    padding-left: 10px;
+    text-align: center;
+}
+
+#main{
+    background-color: #efefef;
+    padding-bottom:50px;
+}
+
+#description{
+
+}
+
+a{
+            padding-right:5px;
+        }
+        
+        .mynav{
+            text-align:center;
+            background-color: orange;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Select Login </title>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    
+    <script>
+        /*$("#userlog").on("click",function(){
+            window.location.href = "userLogin.php";
+        });
+        
+        $("#adminlog").on("click",function(){
+            window.location.href = "login.php";
+        });*/
+        
+        
+    </script>
+    
+    <style>
+        body{
+            background-color:white;
+        }
+        #formBorder{
+                
+                background: white;
+                color: blue;
+                
+                padding-top: 15px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-bottom: 15px;
+                border-radius:15px;
+            }
+        #added{
+            text-align:center;
+        }
+        #centered{
+            margin-left:30%;
+            margin-right:30%;
+        }
+        #centered1{
+            margin-left:25%;
+            margin-right:30%;
+        }
+        .mynav{
+            text-align:center;
+            background-color: orange;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        #featured{
+            text-align:center;
+        }
+        .carousel-control-next {
+            filter: invert(100%);
+        }
+        .carousel-control-prev {
+            filter: invert(100%);
+        }
+        a{
+            padding-right:5px;
+        }
+        #prid0, #prid1, #prid2, #prid3, #prid4{
+            display:none;
+        }
+        .vl {
+          border-left: 2px solid blue;
+          height: 500px;
+          position: absolute;
+          left: 50%;
+          margin-left: -3px;
+          top: 0;
+        }
+        
+        #main{
+            background-color:#efefef;
+            padding-bottom:100px;
+        }
+    </style>
+    
+    <body>
+    
+        <img src = "img/logo2.png" width = 100% />
+        
+        
+        <br>
+        
+        <nav class="mynav">
+            <a id="padding" href="home.php"><i class="fa fa-home"></i> Home </a>
+            <a id="padding" href="directLogin.html"><i class="fa fa-user"></i> Login </a>
+            <a id="padding" href="search.php"><i class="fa fa-search"></i> Search </a>
+            <a id="padding" class="currentCart" href="cart.php"><i class="fa fa-shopping-cart"> Cart </i></a>
+            <a id="padding" class="logout" href="logout.php"><i class="fa fa-times"></i> Logout </i></a>
+        </nav>
+        
+        <div id = "main">
+        
+        <center><h5> Log in as :</h5></center>
+        
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                      <img class='card-img-top' src="img/admin2.png" width=306px height=316px>
+                      <p class="card-text"></p>
+                      <button onclick="window.location.href='userLogin.php'" class="btn btn-primary btn-lg"> User </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+              <div class="vl"></div>
+            </div>
+            <div class="col-sm">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                      <img class='card-img-top' src="img/user1.png">
+                      <p class="card-text"></p>
+                      <button onclick="window.location.href='login.php'" class="btn btn-danger btn-lg"> Admin </button>
+                    </div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+
+    </div>
+    </body>
+</html>

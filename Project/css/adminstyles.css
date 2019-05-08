@@ -1,0 +1,60 @@
+#Image{
+   padding-left: 15px;
+    border-radius: 80%;
+}
+
+#products{
+    inline:block;
+}
+
+h1{
+    padding-top: 30px;
+    padding-bottom:30px;
+    text-align: center;
+    background-color: orange;
+    font-family:'Just Another Hand', cursive;
+}
+
+#update{
+    padding-right: 10px; 
+}
+
+.row{
+    border-style: solid;
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+
+#description{
+    padding-left: 15px;
+}
+
+#product{
+    font-size: 1.3em;
+}
+
+a{
+    padding-right:5px;
+}
+        
+.mynav{
+    text-align:center;
+    background-color: orange;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#logout, #add, #report{
+  border-radius:5%;  
+}
+
+#mainBody{
+    background-color:#efefef;
+}   
+        
+
+
+
+
+

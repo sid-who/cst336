@@ -1,0 +1,30 @@
+form, h1{
+    text-align: center;
+}
+
+h1{
+    background-color: orange;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family:'Just Another Hand', cursive;
+}
+
+a{
+            padding-right:5px;
+        }
+        
+.mynav{
+            text-align:center;
+            background-color: orange;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        
+#mainBody{
+    background-color: #efefef;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: fill;
+    padding-bottom: 300px;
+}
+
