@@ -322,7 +322,8 @@ if(!isset($_SESSION['userName'])){
                     },
                     
                     error: function(data, status) {
-                        alert("We don't sell that...!");
+                        //alert("We don't sell that...!");
+                        $("#products").html("<center><font color='red'> No results found </font></center>");
                         //alert(data);
                     },
                 }); // ajax
