@@ -322,8 +322,8 @@ if(!isset($_SESSION['userName'])){
                     },
                     
                     error: function(data, status) {
-                        alert("here comes something...");
-                        alert(data);
+                        alert("We don't sell that...!");
+                        //alert(data);
                     },
                 }); // ajax
             } // specialSearch()
