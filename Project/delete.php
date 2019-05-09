@@ -24,4 +24,5 @@ $stmt->execute();
 
 header("Location: admin.php");
 
+//should work
 ?>
