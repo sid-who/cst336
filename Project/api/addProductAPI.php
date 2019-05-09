@@ -23,4 +23,6 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 $records = $stmt->fetch(PDO::FETCH_ASSOC);
 echo json_encode($records);
+
+//forcing new push
 ?>
